@@ -1,0 +1,28 @@
+body {
+    margin: 20px auto;
+    width: 90%;
+}
+.todo_list {
+    margin: 10px auto;
+    width: 90%;
+}
+.todo {
+    width: 100%;
+    margin: 20px;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    background-color: #03DFD8;
+    box-shadow: 7px 7px 0px 0px #EBEBEB
+}
+.done {
+    background-color: darkblue;
+    color: white;
+}
+a {
+  padding: 5px 10px;
+  margin: 10px;
+  border: 1px solid #e4e4e4;
+  border-radius: 10px;
+  background-color: #e4e4e4;
+}

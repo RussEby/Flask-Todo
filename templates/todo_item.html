@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block body %}
+    <div class="card">
+        <h1>{{ todo_item['Title'] }}</h1>
+        <h4>ID:  {{ todo_item['id'] }}</h4>
+        <p>
+            {% if todo_item['_is_done']: %}
+                <span class="icon-lock"></span>
+            {% endif %}{{ todo_item['Description'] }}
+        </p>
+        <p>Due Date: {{ todo_item['DueDate'] }}</p>
+        <p>Finished? {{ todo_item['_is_done'] }}</p>
+        <a href="/edit/{{todo_item['id']}}" class="button">Edit this</a>
+        <a href="/delete/{{todo_item['id']}}" class="button">Delete this</a>
+        <a href="/done/{{todo_item['id']}}" class="button">Finish this</a>
+    </div>
+{% endblock %}

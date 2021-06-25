@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block body %}
+    <div class="row">
+        {% for todo in todos %}
+            <div class="card">
+                <h3>{{ todo['Title'] }}</h3>
+                <h4>ID:  {{ todo['id'] }}</h4>
+                <p>
+                    {% if todo['_is_done']: %}
+                        <span class="icon-lock"></span>
+                    {% endif %}{{ todo['Description'] }}
+                </p>
+                <p>Due Date: {{ todo['DueDate'] }}</p>
+                <a href="/edit/{{todo['id']}}" class="button">Edit this</a>
+                <a href="/delete/{{todo['id']}}" class="button">Delete this</a>
+                <a href="/done/{{todo['id']}}" class="button">Finish this</a>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

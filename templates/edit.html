@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block body %}
+<form method="POST" action="/update/{{todo_item['id']}}">
+    <label for="Title">Title</label>
+    <input type="text" name="Title" id="Title" value="{{todo_item['Title']}}">
+    <label for="Description">Description</label>
+    <input type="text" name="Description" id="Description" value="{{todo_item['Description']}}">
+    <label for="DueDate">Due Date</label>
+    <input type="date" name="DueDate" id="DueDate" value="{{todo_item['DueDate']}}">
+    <input type="submit">
+</form>
+{% endblock %}
